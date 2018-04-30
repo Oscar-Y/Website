@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Oscar Yu</title>
+<meta name="author" content="Oscar Yu" />
+<meta name="description" content="Oscar Yu and his average portfolio. Oscar fuses marketing strategies and creative problem solving to produce creative and effective communication with software development and graphic design. Oscar Yu pushes creative boundaries with his clients without sacrificing their business objectives.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Open+Sans", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.7;
+}
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button {
+    background-color: #5eadd2;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #76bad3;
+    color: white;
+}
+
+.footer {
+    background-color: #607d8b;
+
+}
+
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('/images/background.png');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("/images/background2.png");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("/images/background3.png");
+    min-height: 400px;
+}
+
+.bgimg-4 {
+    background-image: url("/images/background4.png");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        background-attachment: scroll;
+    }
+}
+
+
+.container {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+/* Clear floats after containers */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Increase the font-size of a span element */
+.container span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+@media (max-width: 500px) {
+  .container {
+    text-align: center;
+  }
+
+  .container img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a style="color:#141414;" href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
+    <a style="color:#141414;" href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> About</a>
+    <a style="color:#141414;" href="#testimonials" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-edit"></i> Testimonials</a>
+    <a style="color:#141414;" href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Portfolio</a>
+    <a style="color:#141414;" href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Contact</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">About</a>
+    <a href="#testimonials" class="w3-bar-item w3-button" onclick="toggleFunction()">Testimonials</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">Portfolio</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <img src="/images/oylogo.png" alt="Oscar Yu Logo">
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">Hello!</h3>
+  <p class="w3-center"><em>I love making an impact with technology</em></p>
+  <p>Hello! I'm Oscar Yu, welcome to my website. I am a Grade 12 student, a passionate graphic designer, and an aspiring software developer who is adept at creative thinking, problem solving, and crafting digital marketing campaigns. I can help you make your next project awesome,  planning, designing and programming your project so it enhances your brand and makes your customers happy. Collaborating with passionate people to create something impactful is important to me. Next year, I will be pursuing a BSc at the University of British Columbia.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="/images/oscaryu.jpg" class="w3-round w3-image" alt="Oscar Yu" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small">
+      <p>I love order and structure and stand for quality. I also love spending time on fixing little details and optimizing software. I love working with people, because it allows me to learn more faster. Feel free to poke around the website to learn more about me and see what I have been up to!</p>
+      <p>E-mail: <a target="_blank" href="mailto:oscaryu.77@gmail.com">oscaryu.77@gmail.com</a></p>
+      <p>Phone: <a target="_blank" href="tel:778-558-1666">778-558-1666</a></p>
+      <p>LinkedIn: <a target="_blank" href="https://linkedin.com/in/oscar-yu">linkedin.com/in/oscar-yu</a></p>
+      <p>GitHub: <a target="_blank" href="https://github.com/Oscar-Y/">Oscar-Y</a></p>
+    </div>
+  </div>
+<br>
+<center><button target="_blank" class="button" onclick="window.open('/OscarYuResume.pdf','_blank')" >Download R&eacute;sum&eacute; (PDF)</button></center>
+
+</div>
+
+<div class="w3-padding-16 w3-light-blue">
+</div>
+
+<div class="bgimg-4 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">Testimonials</span>
+  </div>
+</div>
+
+
+<div class="w3-content w3-container w3-padding-64" id="testimonials">
+<h3 class="w3-center">Testimonials</h3>
+<div class="container">
+  <img src="/images/wendy.jpg" alt="Wendy Testimonial for Oscar Yu" style="width:90px">
+  <p><span>Wendy Hoy</span> Software Developer at Bananatag</p>
+  <p>When working with children, he was friendly, attentive, and patient, and he also demonstrated a strong knowledge in programming. Oscar's positive attitude, ambition, and work ethic would be a valuable addition to any team.</p>
+</div>
+
+<div class="container">
+  <img src="/images/cooper.jpg" alt="Cooper Testimonial for Oscar Yu" style="width:90px">
+  <p><span>Cooper Ang</span> President of Enroot Society</p>
+  <p>Oscar's work for our organization is a shining example of his skills and expertise to build a logo and brand. Oscar is an invaluable asset for creating a simple yet powerful logo.</p>
+</div>
+
+<div class="container">
+  <img src="/images/krista.png" alt="Krista Testimonial for Oscar Yu" style="width:90px">
+  <p><span>Krista Harrison</span> Youth Services Librarian at Richmond Public Library</p>
+  <p>Oscar's involvement in our digital programs allowed for him to share his passion for technology with youth. During his time as a volunteer, Oscar has demonstrated responsibility, punctuality, patience and enthusiasm.</p>
+</div>
+
+<div class="container">
+  <img src="/images/alannah.jpg" alt="Alannah Testimonial for Oscar Yu" style="width:90px">
+  <p><span>Alannah Zhou</span> CEO of ezWake</p>
+  <p>I've been on so many teams before and I've never seen such a professional looking guideline. Oscar is greatly meticulous with his work. With careful attention to detail, his standards for work will be consistent with the organization's.</p>
+</div>
+
+<div class="container">
+  <img src="/images/timothy.jpg" alt="Timothy Testimonial for Oscar Yu" style="width:90px">
+  <p><span>Timothy Nguyen</span> Lead Organizer of TEDxVancouverCollege</p>
+  <p>I could trust Oscar in making our vision into a reality for our TEDx event. He managed to creatively cater to our wishes which lead to the production of a website and a poster that were both visually appealing and impactful.</p>
+</div>
+ 
+<div class="container">
+  <img src="/images/woman.png" alt="Lina Testimonial for Oscar Yu" style="width:90px">
+  <p><span>Lina Marino</span> Education Assistant at Vancouver College</p>
+  <p>Oscar has a strong presence in our community and is always involved in activites to help promote inclusiveness. His dedication, work ethic and personable deposition would make him an asset to any organization.</p>
+</div>
+</div>
+
+
+
+
+<div class="w3-light-blue w3-padding-16">
+</div>
+
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">Portfolio</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">My Work</h3>
+
+  <p>Here is what I do:
+  <br>
+  <ul>
+  <li>Logo Design</li>
+  <li>Web Development</li>
+  <li>Graphic Design</li>
+  <li>Visual Identity and Branding</li>
+  <li>Presentations</li>
+  <li>Canvas Paintings</li>
+  </ul>
+
+Click on the images to make them bigger</p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="/images/painting1.jpg" style="width:105%" onclick="onClick(this)" class="w3-hover-opacity" alt="Gnarled - Oscar Yu">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/images/ezWake.png" style="width:105%" onclick="onClick(this)" class="w3-hover-opacity" alt="ezWake App logo and UI design">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/images/painting2.jpg" style="width:105%" onclick="onClick(this)" class="w3-hover-opacity" alt="Antarctic - Oscar Yu">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/images/TEDxVancouverCollege.png" style="width:105%" onclick="onClick(this)" class="w3-hover-opacity" alt="TEDxVancouverCollege">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="/images/enrootsociety.png" style="width:105%" onclick="onClick(this)" class="w3-hover-opacity" alt="Enroot Society Logo and Marketing Material">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/images/nhl.png" style="width:105%" onclick="onClick(this)" class="w3-hover-opacity" alt="Custom NHL wallpapers and cover photos">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/images/wrestling.png" style="width:105%" onclick="onClick(this)" class="w3-hover-opacity" alt="VC Irish Wrestling Team Graphics">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/images/painting3.jpg" style="width:105%" onclick="onClick(this)" class="w3-hover-opacity" alt="Toasted - Oscar Yu">
+    </div>
+  </div>
+    <center><button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px" onclick="window.location.href='http://oskiey.blogspot.ca/'" >Load More</button></center>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+<div class="w3-light-blue w3-padding-16">
+</div>
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">Contact</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">Where You Can Find Me</h3>
+  <p class="w3-center"><em>I would love to offer you my services or help you in any way!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Vancouver, BC<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 778-558-1666<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: oscaryu.77@gmail.com<br>
+      </div>
+      <p>Would you like to discuss? Have any questions or feedback? Want to say hi? Let's chat!</p>
+      <button target="_blank" class="button" onclick="window.open('https://goo.gl/forms/d80isze3Kwj7cZdB3','_blank')" >Contact Form</button>
+ 
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer w3-center w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a target="_blank" href="https://www.linkedin.com/in/oscar-yu/"><i class="fa fa-linkedin w3-hover-opacity" style="color:white"></i></a>
+    <a target="_blank" href="https://twitter.com/KKanucks"><i class="fa fa-twitter w3-hover-opacity" style="color:white"></i></a>
+    <a target="_blank" href="https://www.facebook.com/KKanucks"><i class="fa fa-facebook-official w3-hover-opacity" style="color:white"></i></a>
+    <a target="_blank" href="https://www.instagram.com/oskieey/"><i class="fa fa-instagram w3-hover-opacity" style="color:white"></i></a>
+  </div>
+  <font color="white">"Don’t cry because it’s over, smile because it happened."</font>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(49.264033, -123.104437);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8qSQwm5vKAXyA1SvLOIDFkuwKP8HRLq4&callback=myMap"></script>
+
+</body>
+</html>
